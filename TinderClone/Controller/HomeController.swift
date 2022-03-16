@@ -12,6 +12,7 @@ class HomeController: UIViewController {
     // MARK: - Properties
     
     private let topStack = HomeNavigationStackView()
+    private let bottomStack = BottomControlsStackView()
     
     private let deckView: UIView = {
         let view = UIView()
@@ -34,10 +35,18 @@ class HomeController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         
-        view.addSubview(topStack)
-        topStack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+        let stack = UIStackView(arrangedSubviews: [topStack, deckView, bottomStack])
+        stack.axis = .vertical
+        view.addSubview(stack)
+        
+        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
                         left: view.leftAnchor,
+                        bottom: view.safeAreaLayoutGuide.bottomAnchor,
                         right: view.rightAnchor)
+        
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = .init(top: 0, left: 12, bottom: 0, right: 12)
+        
         
         
     }

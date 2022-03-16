@@ -11,25 +11,29 @@ class BottomControlsStackView: UIStackView {
     
     //MARK: - Properties
     
-    let settingsButton = UIButton(type: .system)
-    let messageButton = UIButton(type: .system)
-    let tinderIcon = UIImageView(image: #imageLiteral(resourceName: "app_icon"))
+    let refreshButton = UIButton(type: .system)
+    let dislikeButton = UIButton(type: .system)
+    let superlikeButton = UIButton(type: .system)
+    let likeButton = UIButton(type: .system)
+    let boostButton = UIButton(type: .system)
+
     
     //MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        heightAnchor.constraint(equalToConstant: 120).isActive = true
+        distribution = .fillEqually
         
-        settingsButton.setImage(#imageLiteral(resourceName: "top_left_profile").withRenderingMode(.alwaysOriginal), for: .normal)
-        messageButton.setImage(#imageLiteral(resourceName: "top_right_messages").withRenderingMode(.alwaysOriginal), for: .normal)
+        refreshButton.setImage(#imageLiteral(resourceName: "refresh_circle").withRenderingMode(.alwaysOriginal), for: .normal)
+        dislikeButton.setImage(#imageLiteral(resourceName: "dismiss_circle").withRenderingMode(.alwaysOriginal), for: .normal)
+        superlikeButton.setImage(#imageLiteral(resourceName: "super_like_circle").withRenderingMode(.alwaysOriginal), for: .normal)
+        likeButton.setImage(#imageLiteral(resourceName: "like_circle").withRenderingMode(.alwaysOriginal), for: .normal)
+        boostButton.setImage(#imageLiteral(resourceName: "boost_circle").withRenderingMode(.alwaysOriginal), for: .normal)
         
-        [settingsButton, UIView(), tinderIcon, UIView(), messageButton].forEach { view in
+        [refreshButton, dislikeButton, superlikeButton, likeButton, boostButton].forEach { view in
             addArrangedSubview(view)
         }
-        
-        distribution = .equalCentering
-        isLayoutMarginsRelativeArrangement = true
-        layoutMargins = .init(top: 0, left: 16, bottom: 0, right: 16)
         
     }
     
