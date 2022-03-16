@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		48D9653227E17019000BD0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9653127E17019000BD0AE /* AppDelegate.swift */; };
 		48D9653427E17019000BD0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9653327E17019000BD0AE /* SceneDelegate.swift */; };
-		48D9653627E17019000BD0AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9653527E17019000BD0AE /* ViewController.swift */; };
 		48D9653927E17019000BD0AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D9653727E17019000BD0AE /* Main.storyboard */; };
 		48D9653B27E1701B000BD0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D9653A27E1701B000BD0AE /* Assets.xcassets */; };
 		48D9653E27E1701B000BD0AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D9653C27E1701B000BD0AE /* LaunchScreen.storyboard */; };
+		48D9654D27E172D0000BD0AE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9654C27E172D0000BD0AE /* HomeController.swift */; };
+		48D9654F27E173B8000BD0AE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9654E27E173B8000BD0AE /* Extensions.swift */; };
+		48D9655127E17486000BD0AE /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9655027E17486000BD0AE /* HomeNavigationStackView.swift */; };
+		48D9655327E17A36000BD0AE /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9655227E17A36000BD0AE /* BottomControlsStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48D9652E27E17019000BD0AE /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D9653127E17019000BD0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D9653327E17019000BD0AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48D9653527E17019000BD0AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48D9653827E17019000BD0AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48D9653A27E1701B000BD0AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D9653D27E1701B000BD0AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D9653F27E1701B000BD0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D9654C27E172D0000BD0AE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		48D9654E27E173B8000BD0AE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		48D9655027E17486000BD0AE /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
+		48D9655227E17A36000BD0AE /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		48D9653027E17019000BD0AE /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
+				48D9654A27E17261000BD0AE /* Model */,
+				48D9654927E17260000BD0AE /* View */,
+				48D9654827E1725E000BD0AE /* ViewModel */,
+				48D9654627E17256000BD0AE /* Controller */,
+				48D9654527E1724F000BD0AE /* API */,
+				48D9654B27E1728A000BD0AE /* Utils */,
 				48D9653127E17019000BD0AE /* AppDelegate.swift */,
 				48D9653327E17019000BD0AE /* SceneDelegate.swift */,
-				48D9653527E17019000BD0AE /* ViewController.swift */,
 				48D9653727E17019000BD0AE /* Main.storyboard */,
 				48D9653A27E1701B000BD0AE /* Assets.xcassets */,
 				48D9653C27E1701B000BD0AE /* LaunchScreen.storyboard */,
 				48D9653F27E1701B000BD0AE /* Info.plist */,
 			);
 			path = TinderClone;
+			sourceTree = "<group>";
+		};
+		48D9654527E1724F000BD0AE /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		48D9654627E17256000BD0AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48D9654C27E172D0000BD0AE /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48D9654827E1725E000BD0AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48D9654927E17260000BD0AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48D9655027E17486000BD0AE /* HomeNavigationStackView.swift */,
+				48D9655227E17A36000BD0AE /* BottomControlsStackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48D9654A27E17261000BD0AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48D9654B27E1728A000BD0AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				48D9654E27E173B8000BD0AE /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D9653627E17019000BD0AE /* ViewController.swift in Sources */,
+				48D9655327E17A36000BD0AE /* BottomControlsStackView.swift in Sources */,
 				48D9653227E17019000BD0AE /* AppDelegate.swift in Sources */,
 				48D9653427E17019000BD0AE /* SceneDelegate.swift in Sources */,
+				48D9655127E17486000BD0AE /* HomeNavigationStackView.swift in Sources */,
+				48D9654D27E172D0000BD0AE /* HomeController.swift in Sources */,
+				48D9654F27E173B8000BD0AE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
